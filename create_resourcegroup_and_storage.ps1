@@ -4,9 +4,9 @@ New-AzureRmResourceGroup `
 
 #setup storage account
 New-AzureRmStorageAccount `
-        -Name "sa$ns" -ResourceGroupName $resourceGroup `
+        -Name $storageAcctName -ResourceGroupName $resourceGroup `
         -Type Standard_LRS -Location $location
 
 $storageAcc = Get-AzureRmStorageAccount `
-        -ResourceGroupName $resourceGroup -Name "sa$ns"
+        -ResourceGroupName $resourceGroup -Name $storageAcctName
 $osDiskUri = $storageAcc.PrimaryEndpoints.Blob.ToString() + "vhds/" + $diskName + ".vhd"

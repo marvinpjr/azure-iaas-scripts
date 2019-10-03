@@ -1,4 +1,7 @@
-﻿#setup vnet, public ip
+﻿#create availability set
+$availabilitySet = New-AzureRmAvailabilitySet -ResourceGroupName $resourceGroup -Location $location -Name "iaas-avset"
+
+#setup vnet, public ip
 $subnet = New-AzureRmVirtualNetworkSubnetConfig `
         -Name "sn-$ns" -AddressPrefix 10.0.1.0/24
 

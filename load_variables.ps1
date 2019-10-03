@@ -7,6 +7,7 @@ $vmName = "vm-$ns"
 
 $diskName = "disk-$ns"
 $nsgName = "nsg-$ns"
+$storageAcctName = "sa$ns"
 $adminUserName = "marvinpjr"
-$adminPassword = "AjskdlfQuwieor!23"
+$adminPassword = ""
 $myip = (Invoke-WebRequest -Uri "http://ipconfig.me/ip").Content
